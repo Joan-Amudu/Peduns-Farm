@@ -57,6 +57,9 @@ body {
 .border-black {
     border: 1px solid black !important;
 }
+.bg-orange {
+    background: #FFA500 !important;
+}
 
 /* -------------------------------- Media Queries */
 
