@@ -1,0 +1,128 @@
+[
+    {
+      "pk": 1,
+      "model": "products.product",
+      "fields": {
+        "sku": "pp0001",
+        "name": "Apples",
+        "description": "Royal Gala Apples currently in Season",
+        "price": 4.99,
+        "category": 2,
+        "rating": 4.6,
+        "image_url": "https://www.pexels.com/photo/food-healthy-red-apple-10112870/",
+        "image": "apples.jpeg"
+      }
+    },
+    {
+      "pk": 2,
+      "model": "products.product",
+      "fields": {
+        "sku": "pp0002",
+        "name": "Asparagus",
+        "description": "A bunch of Asparagus",
+        "price": 5.99,
+        "category": 1,
+        "rating": 4.6,
+        "image_url": "https://www.pexels.com/photo/flat-lay-photography-of-asparagus-351679/",
+        "image": "asparagus.jpeg"
+      }
+    },
+    {
+      "pk": 3,
+      "model": "products.product",
+      "fields": {
+        "sku": "pp0003",
+        "name": "Carrots",
+        "description": "A bunch of carrots",
+        "price": 3.99,
+        "category": 1,
+        "rating": 4.6,
+        "image_url": "https://www.pexels.com/photo/food-healthy-vegetables-lunch-6631952/",
+        "image": "carrots.jpeg"
+      }
+    },
+    {
+      "pk": 4,
+      "model": "products.product",
+      "fields": {
+        "sku": "pp0004",
+        "name": "Fruits",
+        "description": "A box of fruits currently in Season",
+        "price": 8.99,
+        "category": 2,
+        "rating": 4.6,
+        "image_url": "https://www.pexels.com/photo/assorted-fruits-on-a-box-6654941/",
+        "image": "fruits.jpeg"
+      }
+    },
+    {
+      "pk": 5,
+      "model": "products.product",
+      "fields": {
+        "sku": "pp0005",
+        "name": "Mix Eco Box",
+        "description": "A box of mixed fruits and vegetables",
+        "price": 12.00,
+        "category": 3,
+        "rating": 4.6,
+        "image_url": "https://www.pexels.com/photo/plastic-container-with-fruits-and-vegetables-on-green-grass-3988952/",
+        "image": "mixed.jpeg"
+      }
+    },
+    {
+      "pk": 6,
+      "model": "products.product",
+      "fields": {
+        "sku": "pp0006",
+        "name": "Plums",
+        "description": "A box of plums",
+        "price": 8.99,
+        "category": 2,
+        "rating": 4.6,
+        "image_url": "https://www.pexels.com/photo/full-frame-shot-of-fruits-and-tree-255479/",
+        "image": "plums.jpeg"
+      }
+    },
+    {
+      "pk": 7,
+      "model": "products.product",
+      "fields": {
+        "sku": "pp0007",
+        "name": "Potatoes",
+        "description": "A bag of potatoes",
+        "price": 4.00,
+        "category": 1,
+        "rating": 4.6,
+        "image_url": "https://www.pexels.com/photo/close-up-photo-of-brown-potatoes-in-a-red-sack-7839484/",
+        "image": "potatoes.jpeg"
+      }
+    },
+    {
+      "pk": 8,
+      "model": "products.product",
+      "fields": {
+        "sku": "pp0008",
+        "name": "Strawberries",
+        "description": "A box of strawberries",
+        "price": 6.99,
+        "category": 2,
+        "rating": 4.6,
+        "image_url": "https://www.pexels.com/photo/red-strawberry-fruits-on-gray-basket-2270971/",
+        "image": "strawberries.jpeg"
+      }
+    },
+    {
+      "pk": 9,
+      "model": "products.product",
+      "fields": {
+        "sku": "pp0009",
+        "name": "Vegetables",
+        "description": "A box of vegetables currently in Season",
+        "price": 10.00,
+        "category": 1,
+        "rating": 4.6,
+        "image_url": "https://www.pexels.com/photo/assorted-vegetable-lot-1300972/",
+        "image": "veggies.jpeg"
+      }
+    }
+  ]
