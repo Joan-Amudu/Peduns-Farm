@@ -19,8 +19,8 @@
       "pk": 3,
       "model": "products.category",
       "fields": {
-        "name": "fruits_vegetables",
-        "friendly_name": "Fruits & Vegetables"
+        "name": "eco_boxes",
+        "friendly_name": "Eco Boxes"
       }
     }    
   ]
