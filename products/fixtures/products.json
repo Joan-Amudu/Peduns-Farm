@@ -37,7 +37,7 @@
         "price": 3.99,
         "category": 1,
         "rating": 4.6,
-        "image_url": "https://www.pexels.com/photo/food-healthy-vegetables-lunch-6631952/",
+        "image_url": "https://www.pexels.com/photo/orange-carrots-on-table-143133/",
         "image": "carrots.jpeg"
       }
     },
@@ -79,7 +79,7 @@
         "price": 8.99,
         "category": 2,
         "rating": 4.6,
-        "image_url": "https://www.pexels.com/photo/full-frame-shot-of-fruits-and-tree-255479/",
+        "image_url": "https://www.pexels.com/photo/close-up-shot-of-plums-9591744/",
         "image": "plums.jpeg"
       }
     },
