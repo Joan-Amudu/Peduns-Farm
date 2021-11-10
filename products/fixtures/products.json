@@ -47,8 +47,8 @@
       "fields": {
         "sku": "pp0004",
         "name": "Fruits",
-        "description": "A box of fruits currently in Season",
-        "price": 8.99,
+        "description": "Your fruits eco box will contain the fruits currently in Season: Apples, Oranges, Strawberries, Blueberries, lime and Golden Kiwi",
+        "price": 13.99,
         "category": 2,
         "rating": 4.6,
         "image_url": "https://www.pexels.com/photo/assorted-fruits-on-a-box-6654941/",
@@ -61,7 +61,7 @@
       "fields": {
         "sku": "pp0005",
         "name": "Mix Eco Box",
-        "description": "A box of mixed fruits and vegetables",
+        "description": "This is a mixed box of fruits and vegetables currently in season: Apples, Carrots Potatoes, Zucchini, Pears, Muschrooms, Oranges, Bananas, and Brocolli",
         "price": 12.00,
         "category": 3,
         "rating": 4.6,
@@ -117,7 +117,7 @@
       "fields": {
         "sku": "pp0009",
         "name": "Vegetables",
-        "description": "A box of vegetables currently in Season",
+        "description": "A box of vegetables currently in Season: Zucchini, Beets, Leafy greens, Tomatoes, Squash, Red Cabbages, and Peppers ",
         "price": 10.00,
         "category": 1,
         "rating": 4.6,
