@@ -78,6 +78,10 @@ body {
 	z-index: -1;
 }
 
+.update-link,
+.remove-item {
+    cursor: pointer;
+}
 
 /* -------------------------------- Media Queries */
 
