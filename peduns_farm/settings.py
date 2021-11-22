@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-7)jd(m(_f0$=pr1f&_g#rywbu1o-$5ox%cgcm(xzwxffk07sjk
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['peduns-farm.herokuapp.com', 'localhost']
 
 
 # Application definition
