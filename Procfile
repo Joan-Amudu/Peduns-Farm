@@ -1,1 +1,1 @@
-web: gunicorn peduns-farm.wsgi.application
+web: gunicorn peduns-farm.wsgi:application
