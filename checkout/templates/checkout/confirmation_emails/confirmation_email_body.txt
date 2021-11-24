@@ -1,0 +1,27 @@
+Hi, {{ order.full_name }}!
+
+
+Thank you for shopping with Peduns Farm :-)
+
+Here is your order confirmation.
+
+Order Number: {{ order.order_number }}
+Order Date: {{ order.date }}
+
+Order Total: ${{ order.order_total }}
+Delivery: ${{ order.delivery_cost }}
+Grand Total: ${{ order.grand_total }}
+
+Your order will be shipped to {{ order.street_address1 }} in {{ order.town_or_city }}, {{ order.country }}.
+
+We've got your phone number on file as {{ order.phone_number }}.
+
+To see the full transaction details, log in to your Peduns Farm account.
+
+If you have any further questions or concerns, please don't hesitate to reach us at {{ contact_email }}.
+
+Thank you for your order!
+
+Sincerely,
+
+Peduns Farm
