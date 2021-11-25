@@ -16,16 +16,18 @@
 {% block content %}
     <div class="overlay"></div>
     <div class="container">
-        <div class="row">
-            <div class="col-12 col-lg-8">
-                <hr>
-                <h2 class="logo-font mb-4">Fruit Picking</h2>
-                <hr>                
-            
-                <p class="text-muted">We accept cash at the door only during our fruit picking season</p>
-                <p class="text-muted">However, due to the current COVID regulations, bookings are required.</p>                              
-                <p class="text-muted">To make a booking, Please fill in the form below</p>
-                <span><p class="text-muted">* Entry is Free for children under the age of 12</p></span>                
+        <div class="row booking_container">
+            <div class="col-12 col-lg-6">
+                <div class="text-center">
+                    <hr>
+                    <h2 class="logo-font mb-4">Fruit Picking</h2>
+                    <hr>                
+                    
+                    <p class="text-muted">We accept cash at the door only during our fruit picking season</p>
+                    <p class="text-muted">However, due to the current COVID regulations, bookings are required.</p>                              
+                    <p class="text-muted">To make a booking, Please fill in the form below</p>
+                    <span><p class="text-muted">* Entry is Free for children under the age of 12</p></span> 
+                </div>               
                 <form action="{% url 'booking' %}" method="POST" id="booking-form">
                     {% csrf_token %}
                     {{ form|crispy }}
@@ -53,40 +55,54 @@
                           <option>9</option>
                           <option>10</option>
                         </select>
-                    </div>
-                    <!-- Date Picker -->
-                    <div class="form-group datepicker">                        
-                        <input class="form-control" type="text" id="date_picker" placeholder="Date" aria-describedby="date_picker">                     
-                        
-                    </div>
+                    </div>                    
                     <!-- phone Number -->
                     <div class="form-group">                        
                         <input class="form-control" type="text" id="phonenumber" placeholder="Phone Number" aria-describedby="phonenumber">                        
                         <small id="phoneHelp" class="form-text text-muted">A confirmation text will be sent to this phone number.</small>
                     </div> 
+                    <!-- Date Picker -->
+                    <div class="form-group"> 
+                        
+                        <div class="input-group">
+                            <input class="form-control datepicker" type="text" id="datepicker" placeholder="Date" aria-describedby="datepicker">
+                            <span class="input-group-append">
+                                <span class="input-group-text datepicker bg-white">
+                                    <i class="fas fa-calendar"></i>
+                                </span>                            
+                            </span>
+                        </div>
+                                                                       
+                    </div>
                     <!-- Booking Button -->                   		
-					<button id="submit-button" class="btn btn-black rounded-0">
-						<span class="font-weight-bold">Book</span>							
-					</button>						
-					<!-- Save to user profile -->
+				    <button id="submit-button" class="btn btn-black rounded-0">
+				    	<span class="font-weight-bold">Book</span>							
+				    </button>						
+				    <!-- Save to user profile -->
                     <fieldset class="rounded px-3 mb-5">                       
                         <div class="form-check form-check-inline float-right mr-0">
-							{% if user.is_authenticated %}
-								<label class="form-check-label" for="id-save-info">Save this delivery information to my profile</label>
+				    		{% if user.is_authenticated %}
+				    			<label class="form-check-label" for="id-save-info">Save this delivery information to my profile</label>
                                 <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info" checked>
-							{% else %}
-								<label class="form-check-label" for="id-save-info">
+				    		{% else %}
+				    			<label class="form-check-label" for="id-save-info">
                                     <a class="text-info" href="{% url 'account_signup' %}">Create an account</a> or 
                                     <a class="text-info" href="{% url 'account_login' %}">login</a> to save this information
                                 </label>
-							{% endif %}
-						</div>
-                    </fieldset>              
-
-                    
-                </form>
-            </div>
+				    		{% endif %}
+				    	</div>
+                    </fieldset>                 
+                </form> 
+            </div>           
         </div>   
     </div>
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+<script type="text/javascript">
+    $(function() {
+        $('.datepicker').datepicker();
+</script>
 {% endblock %}
 
