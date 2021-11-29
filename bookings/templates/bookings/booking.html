@@ -33,15 +33,15 @@
                     {{ form|crispy }}
                     <!-- Full Name -->
                     <div class="form-group">                        
-                        <input class="form-control" type="text" id="fullname" placeholder="Full Name" aria-describedby="fullname">                       
+                        <input class="form-control" type="text" id="fullname" placeholder="Full Name" aria-describedby="fullname" required>                       
                     </div>
                     <!-- email -->
                     <div class="form-group">                        
-                        <input class="form-control" type="email" id="email" placeholder="Email address" aria-describedby="email">                        
+                        <input class="form-control" type="email" id="email" placeholder="Email address" aria-describedby="email" required>                        
                     </div>
                     <!-- Number of people -->
                     <div class="form-group">                        
-                        <select class="form-control" id="numberOfPeople" >
+                        <select class="form-control" id="numberOfPeople">
                             <option>Number of people</option>
                             <option>1</option>
                             <option>2</option>
@@ -49,49 +49,49 @@
                             <option>4</option>
                             <option>5</option>
                             <option>6</option>
-                            <option>7</option>
-                            <option>8</option>
-                            <option>9</option>
-                            <option>10</option>
                         </select>
-                    </div>                    
-                    <!-- phone Number -->
-                    <div class="form-group">                        
-                        <input class="form-control" type="text" id="phonenumber" placeholder="Phone Number" aria-describedby="phonenumber">         
-                        
-                    </div> 
-                    <!-- Date Picker -->
-                    <div class="form-group"> 
-                        
-                        <div class="input-group">
-                            <input class="form-control datepicker" type="text" id="datepicker" placeholder="Date" aria-describedby="datepicker">
-                            <span class="input-group-append">
-                                <span class="input-group-text datepicker bg-white">
-                                    <i class="fas fa-calendar-alt"></i>
-                                </span>                            
-                            </span>
-                        </div>
-                                                                       
                     </div>
-                    <!-- Booking Button -->                   		
-				    <button id="submit-button" class="btn btn-black rounded-0">
+                    <!-- Date Picker -->
+                    <div class="form-group">                        
+                        <div class="input-group">                                                  
+                            <select class="form-control" id="numberOfPeople">
+                                <option>Available Dates</option>
+                                <option>5/03/2022</option>
+                                <option>12/03/2022</option>
+                                <option>19/03/2022</option>
+                                <option>26/03/2022</option>                                
+                            </select>
+                        </div>                                                                                           
+                    </div>
+                    <!-- Booking Button and modal trigger -->                   		
+				    <button class="btn btn-black rounded-0" id="submit-button" type="button" data-toggle="modal" data-target="#bookingModal">
 				    	<span class="font-weight-bold">Book</span>							
-				    </button>						
-				    <!-- Save to user profile -->
-                    <fieldset class="rounded px-3 mb-5">                       
-                        <div class="form-check form-check-inline float-right mr-0">
-				    		{% if user.is_authenticated %}
-				    			<label class="form-check-label" for="id-save-info">Save this delivery information to my profile</label>
-                                <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info" checked>
-				    		{% else %}
-				    			<label class="form-check-label" for="id-save-info">
-                                    <a class="text-info" href="{% url 'account_signup' %}">Create an account</a> or 
-                                    <a class="text-info" href="{% url 'account_login' %}">login</a> to save this information
-                                </label>
-				    		{% endif %}
-				    	</div>
-                    </fieldset>                 
-                </form> 
+				    </button>                                 
+                </form>
+                <!-- Booking Confirmation Modal -->
+                <div class="modal fade" id="bookingModal" tabindex="-1" role="dialog" aria-labelledby="bookingModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header text-black">
+                                <h5 class="modal-title" id="bookingModalLabel">You're booking is confirmed.</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <p class="text-black">Thank you for booking with us. You will recieve a confirmation email shortly!</p>
+                            </div>
+                            <div class="modal-footer">
+                                <a href="{% url 'home' %}" class="btn btn-black rounded-0 my-2">
+                                    <span class="icon mr-2">
+                                        <i class="fas fa-home"></i>
+                                    </span>
+                                    <span class="text-uppercase">Go Back Home!</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>                
             </div>           
         </div>   
     </div>
@@ -100,8 +100,10 @@
 {% block postloadjs %}
 {{ block.super }}
 <script type="text/javascript">
-    $(function() {
-        $('.datepicker').datepicker();
+    $('#booking-form').submit(function (e) {
+        e.preventDefault();
+        $('#bookingModal').modal('show');
+        $('#booking-form')[0].reset();
     });
 </script>
 {% endblock %}
