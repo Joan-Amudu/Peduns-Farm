@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from .forms import BookingForm
 # Create your views here.
 
 
@@ -13,8 +13,10 @@ def booking(request):
             'number_of_people': request.POST['number_of_people'],
             'date': request.POST['date'],
         }
-
+    booking_form = BookingForm()
     template = 'bookings/booking.html'
-    context = {}
+    context = {
+        'booking_form': booking_form,
+    }
 
     return render(request, template, context)

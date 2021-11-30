@@ -5,8 +5,8 @@ from .models import UserBooking
 class BookingForm(forms.ModelForm):
     class Meta:
         model = UserBooking
-        fields = ('full_name', 'email', 'number_of_people',
-                  'date',)
+        fields = ('full_name', 'email', 'number_of_people',)
+                  
 
     def __init__(self, *args, **kwargs):
         """
@@ -18,7 +18,6 @@ class BookingForm(forms.ModelForm):
             'full_name': 'Full Name',
             'email': 'Email Address',
             'number_of_people': 'Number of people',
-            'date': 'date',
         }
 
         self.fields['full_name'].widget.attrs['autofocus'] = True
