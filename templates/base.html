@@ -39,25 +39,52 @@
     
     <header>
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Navbar</a>
+        <a class="nav-link main-logo-link" href="{% url 'home' %}">
+          <h2 class="logo-font text-black">Peduns Farm</h2>
+        </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-              <ul class="navbar-nav list-inline list-unstyled text-center text-lg-left my-0">
-                <li class="nav-item active">
-                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Features</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Pricing</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link disabled">Disabled</a>
-                </li>
+              <ul class="navbar-nav">                     
+                  <li class="nav-item dropdown">
+                      <a class="nav-link text-black" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          About
+                      </a>
+                      <div class="dropdown-menu border-0" aria-labelledby="all-products-link">                
+                          <a href="#" class="dropdown-item">About Us</a>
+                          <a href="#" class="dropdown-item">Blog</a>
+                          <a href="{% url 'booking' %}" class="dropdown-item">Fruit Picking</a>
+                          
+                      </div>
+                  </li>
+                  <li class="nav-item dropdown">
+                      <a class="nav-link text-black" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Products
+                      </a>
+                      <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
+                          <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
+                          <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item">By Rating</a>
+                          <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item">By Category</a>
+                          <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
+                      </div>
+                  </li>        
+                  <li class="nav-item">
+                      <a class="nav-link text-black" href="{% url 'products' %}?category=eco_boxes">
+                          Eco Boxes
+                      </a>           
+                  </li>        
+                  <li class="nav-item dropdown">
+                      <a class="nav-link text-black" href="#" id="extras-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Extras
+                      </a>
+                      <div class="dropdown-menu border-0" aria-labelledby="homeware-link">
+                          <a href="{% url 'products' %}?category=fruits" class="dropdown-item">Fruits</a>
+                          <a href="{% url 'products' %}?category=vegetables" class="dropdown-item">Vegatables</a>
+                          <a href="{% url 'products' %}?category=fruits,vegetables" class="dropdown-item">All Extras</a>
+                      </div>
+                  </li> 
               </ul>
             </div>
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
@@ -73,55 +100,46 @@
                       </div>
                   </div>
               </form>
-          </div>
+            </div>           
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-                <ul class="navbar-nav list-inline list-unstyled text-center text-lg-right my-0"></ul>
-                    <li class="nav-item list-inline-item dropdown">                
+              <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+                  <li class="list-inline-item dropdown">
                       <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <div class="text-center">
-                          <div><i class="fas fa-user"></i>
-                            <p class="my-0">My Account</p>
-                          </div>                    
-                        </div>
+                          <div class="text-center">
+                              <div><i class="fas fa-user fa-lg"></i></div>
+                              <p class="my-0">My Account</p>
+                          </div>
                       </a>
                       <div class="dropdown-menu border-0" aria-labelledby="user-options">
-                        {% if request.user.is_authenticated %}
-                            {% if request.user.is_superuser %}
-                                <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
-                            {% endif %}
-                            <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
-                            <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
-                        {% else %}
-                            <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                            <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
-                        {% endif %}
-                      </div>
-                    </li>
-                    <li class="nav-item list-inline-item">
-                      <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_cart' %}">
-                        <div class="text-center">
-                          <div>
-                            <i class="fas fa-shopping-cart"></i>
-                            <p class="my-0">
-                              {% if grand_total %}
-                                  ${{ grand_total|floatformat:2 }}
-                              {% else %}
-                                  $0.00
+                          {% if request.user.is_authenticated %}
+                              {% if request.user.is_superuser %}
+                                  <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
                               {% endif %}
-                            </p>
+                              <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
+                              <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                          {% else %}
+                              <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                              <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                          {% endif %}
+                      </div>
+                  </li>
+                  <li class="list-inline-item">
+                      <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_cart' %}">
+                          <div class="text-center">
+                              <div><i class="fas fa-shopping-bag fa-lg"></i></div>
+                              <p class="my-0">
+                                  {% if grand_total %}
+                                      ${{ grand_total|floatformat:2 }}
+                                  {% else %}
+                                      $0.00
+                                  {% endif %}
+                              </p>
                           </div>
-                        </div>
                       </a>
-                    </li>
-                <ul class="navbar-nav">
-            </div>          
+                  </li>
+              </ul>
+          </div>          
         </div>
-        
-                    
-          
-       
-      </div>
-
       </nav>
     </header>
 

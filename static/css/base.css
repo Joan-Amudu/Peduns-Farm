@@ -22,7 +22,10 @@ body {
 
 .logo-font {
     text-transform: uppercase;
-    
+    font-size: large;    
+}
+.user-info {
+    float: right;
 }
 
 .main-logo-link {
