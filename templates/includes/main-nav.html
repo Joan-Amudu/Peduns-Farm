@@ -1,43 +1,14 @@
-<div class="collapse navbar-collapse" id="main-nav">
-    <ul class="navbar-nav w-auto mx-auto">      
-        <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                About
-            </a>
-            <div class="dropdown-menu border-0" aria-labelledby="all-products-link">                
-                <a href="#" class="dropdown-item">About Us</a>
-                <a href="#" class="dropdown-item">Blog</a>
-                <a href="{% url 'booking' %}" class="dropdown-item">Fruit Picking</a>
-                
-            </div>
-        </li>
-        <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                All Products
-            </a>
-            <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
-                <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item">By Rating</a>
-                <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item">By Category</a>
-                <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
-            </div>
-        </li>
-
-        <li class="nav-item">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'products' %}?category=eco_boxes">
-                Eco Boxes
-            </a>           
-        </li>
-
-        <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="extras-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Extras
-            </a>
-            <div class="dropdown-menu border-0" aria-labelledby="homeware-link">
-                <a href="{% url 'products' %}?category=fruits" class="dropdown-item">Fruits</a>
-                <a href="{% url 'products' %}?category=vegetables" class="dropdown-item">Vegatables</a>
-                <a href="{% url 'products' %}?category=fruits,vegetables" class="dropdown-item">All Extras</a>
-            </div>
-        </li>        
-    </ul>
-</div>
+<div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+    <form method="GET" action="{% url 'products' %}">
+      <div class="input-group w-100">
+        <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search our site">
+          <div class="input-group-append">
+              <button class="form-control btn btn-black border border-black rounded-0" type="submit">
+                  <span class="icon">
+                    <i class="fas fa-search"></i>
+                  </span>
+              </button>
+          </div>
+      </div>
+    </form>
+  </div>
