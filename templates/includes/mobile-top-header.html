@@ -1,4 +1,41 @@
 <ul>
+    <li class="list-inline-item dropdown">
+        <a class="nav-link text-black" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            About
+        </a>
+        <div class="dropdown-menu border-0" aria-labelledby="all-products-link">                
+            <a href="#" class="dropdown-item">About Us</a>
+            <a href="#" class="dropdown-item">Blog</a>
+            <a href="{% url 'booking' %}" class="dropdown-item">Fruit Picking</a>
+            
+        </div>
+    </li>
+    <li class="list-inline-item dropdown">
+        <a class="nav-link text-black" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Products
+        </a>
+        <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
+            <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
+            <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item">By Rating</a>
+            <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item">By Category</a>
+            <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
+        </div>
+    </li>        
+    <li class="list-inline-item">
+        <a class="nav-link text-black" href="{% url 'products' %}?category=eco_boxes">
+            Eco Boxes
+        </a>           
+    </li>        
+    <li class="list-inline-item dropdown">
+        <a class="nav-link text-black" href="#" id="extras-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Extras
+        </a>
+        <div class="dropdown-menu border-0" aria-labelledby="homeware-link">
+            <a href="{% url 'products' %}?category=fruits" class="dropdown-item">Fruits</a>
+            <a href="{% url 'products' %}?category=vegetables" class="dropdown-item">Vegatables</a>
+            <a href="{% url 'products' %}?category=fruits,vegetables" class="dropdown-item">All Extras</a>
+        </div>
+    </li> 
     <li class="list-inline-item">
       <a class="text-black nav-link d-block d-lg-none" href="#" id="mobile-search" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <div class="text-center">
@@ -34,7 +71,7 @@
               {% if request.user.is_superuser %}
                   <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
               {% endif %}
-              <a href="" class="dropdown-item">My Profile</a>
+              <a href="{%url 'profile' %}" class="dropdown-item">My Profile</a>
               <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
           {% else %}
               <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
@@ -45,7 +82,7 @@
   <li class="list-inline-item">
       <a class="{% if grand_total %}text-primary font-weight-bold{% else %}text-black{% endif %} nav-link d-block d-lg-none" href="{% url 'view_cart' %}">
           <div class="text-center">
-              <div><i class="fas fa-shopping-bag fa-lg"></i></div>
+              <div><i class="fas fa-shopping-cart"></i></div>
               <p class="my-0">
                   {% if grand_total %}
                       ${{ grand_total|floatformat:2 }}
@@ -56,4 +93,4 @@
           </div>
       </a>
     </li>
-  </ul>
+</ul>
