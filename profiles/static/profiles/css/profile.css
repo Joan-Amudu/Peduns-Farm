@@ -1,3 +1,10 @@
+hr {
+    width: 100px;
+    height: 5px;
+    border: 0;
+    background-color: #000;
+}
+
 .order-history {
     max-height: 416px; /* height of profile form and submit button*/
     overflow-y: auto;

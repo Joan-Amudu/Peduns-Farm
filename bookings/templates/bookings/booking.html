@@ -5,20 +5,11 @@
     <link rel="stylesheet" href="{% static 'bookings/css/booking.css' %}">
 {% endblock %}
 
-{% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
-    </div>
-{% endblock %}
-
 {% block content %}
     <div class="overlay"></div>
         <div class="booking-container container-fluid">
             <div class="row">
-                <div class="col">
-                    <hr>
+                <div class="col">                    
                     <h2 class="logo-font text-center text-black mb-4">Fruit Picking</h2>
                     <hr>
                     <div class="text-center text-black">
@@ -46,26 +37,26 @@
                         <!-- Available Dates -->                                 
                         <fieldset class="rounded px-3 mb-5">
                                 <legend class="fieldset-label small text-black px-2 w-auto">Available Dates</legend>
-                                <ul class ="list-unstyled text-black my-0"> 
-                                    <li>
+                                <ul class="list-inline list-unstyled text-black my-0"> 
+                                    <li class="list-inline-item">
                                         <div class="form-check form-check-inline">                                   
                                             <input class="form-check-input ml-2" type="checkbox" id="fifth-march">
                                             <label class="form-check-label" for="fifth-march">5/03/2022</label>
                                         </div>
                                     </li>
-                                    <li>
+                                    <li class="list-inline-item">
                                         <div class="form-check form-check-inline">                                   
                                             <input class="form-check-input ml-2" type="checkbox" id="twelfth-march">
                                             <label class="form-check-label" for="twelfth-march">12/03/2022</label>
                                         </div>
                                     </li>  
-                                    <li>
+                                    <li class="list-inline-item">
                                         <div class="form-check form-check-inline">                                   
                                             <input class="form-check-input ml-2" type="checkbox" id="nineteenth-march">
                                             <label class="form-check-label" for="nineteenth-march">19/03/2022</label>
                                         </div>
                                     </li>  
-                                    <li>
+                                    <li class="list-inline-item">
                                         <div class="form-check form-check-inline">                                   
                                             <input class="form-check-input ml-2" type="checkbox" id="twenty-sixth-march">
                                             <label class="form-check-label" for="twenty-sixth-march">26/03/2022</label>
