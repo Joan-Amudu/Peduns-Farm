@@ -1,6 +1,7 @@
-hr {
-    width: 100px;
-    height: 5px;
-    border: 0;
-    background-color: #000;
+.products_title span {
+    border-bottom: 4px solid #21b888;
+}
+
+.add-product {
+    background-color: #f8f9fa;
 }

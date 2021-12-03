@@ -10,8 +10,9 @@
         <div class="booking-container container-fluid">
             <div class="row">
                 <div class="col">                    
-                    <h2 class="logo-font text-center text-black mb-4">Fruit Picking</h2>
-                    <hr>
+                    <h2 class="logo-font text-center text-black mb-4 booking_title">
+                        <span>Fruit Picking</span> 
+                    </h2>                    
                     <div class="text-center text-black">
                         <h4> We open again in March!</h4> 
                         <h4>Come and pick your own produce</h4>
@@ -24,7 +25,7 @@
                 </div>
             </div>            
             <div class="row">                
-                <div class="col-12 col-md-6 offset-md-3">                               
+                <div class="col-12 col-md-6 offset-md-3 booking">                               
                     <form action="{% url 'booking' %}" method="POST" id="booking-form">
                         {% csrf_token %}
                         <!-- Booking Details -->

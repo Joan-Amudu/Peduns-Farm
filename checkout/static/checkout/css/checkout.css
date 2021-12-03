@@ -1,9 +1,6 @@
-hr {
-    width: 100px;
-    height: 5px;
-    border: 0;
-    background-color: #000;
-}
+.checkout_title span {
+    border-bottom: 4px solid #21b888;
+};
 
 .StripeElement,
 .stripe-style-input {
