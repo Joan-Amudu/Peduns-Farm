@@ -6,14 +6,14 @@
 {% endblock %}
 
 {% block content %}
-    <div class="overlay"></div>
+    <div class="overlay"></div>   
         <div class="booking-container container-fluid">
-            <div class="row">
-                <div class="col">                    
-                    <h2 class="logo-font text-center text-black mb-4 booking_title">
-                        <span>Fruit Picking</span> 
-                    </h2>                    
-                    <div class="text-center text-black">
+            <h2 class="logo-font text-center text-black mt-4 mb-4 booking_title">
+                <span>Fruit Picking</span> 
+            </h2>
+            <div class="row">                  
+                <div class="col-12 col-md-6 offset-md-3 booking">                                       
+                    <div class="text-center text-black mt-5">
                         <h4> We open again in March!</h4> 
                         <h4>Come and pick your own produce</h4>
                         <h5>Please note: Booking is required!</h5>
@@ -21,79 +21,75 @@
                     <div class="text-center text-black">                                                     
                         <p>To make a booking, Please fill in the form below</p>                    
                         <span><p>*No booking, No entry!</p></span>
-                    </div> 
-                </div>
-            </div>            
-            <div class="row">                
-                <div class="col-12 col-md-6 offset-md-3 booking">                               
+                    </div>                                            
                     <form action="{% url 'booking' %}" method="POST" id="booking-form">
                         {% csrf_token %}
                         <!-- Booking Details -->
                         <fieldset class="rounded px-3 mb-5">
-                                <legend class="fieldset-label small text-black px-2 w-auto">Booking Details</legend>                        
-                                {{ booking_form.full_name | as_crispy_field }}
-                                {{ booking_form.email | as_crispy_field }}
-                                {{ booking_form.number_of_people | as_crispy_field }} 
+                            <legend class="fieldset-label small text-black px-2 w-auto">Booking Details</legend>                        
+                            {{ booking_form.full_name | as_crispy_field }}
+                            {{ booking_form.email | as_crispy_field }}
+                            {{ booking_form.number_of_people | as_crispy_field }} 
                         </fieldset> 
                         <!-- Available Dates -->                                 
                         <fieldset class="rounded px-3 mb-5">
-                                <legend class="fieldset-label small text-black px-2 w-auto">Available Dates</legend>
-                                <ul class="list-inline list-unstyled text-black my-0"> 
-                                    <li class="list-inline-item">
-                                        <div class="form-check form-check-inline">                                   
-                                            <input class="form-check-input ml-2" type="checkbox" id="fifth-march">
-                                            <label class="form-check-label" for="fifth-march">5/03/2022</label>
-                                        </div>
-                                    </li>
-                                    <li class="list-inline-item">
-                                        <div class="form-check form-check-inline">                                   
-                                            <input class="form-check-input ml-2" type="checkbox" id="twelfth-march">
-                                            <label class="form-check-label" for="twelfth-march">12/03/2022</label>
-                                        </div>
-                                    </li>  
-                                    <li class="list-inline-item">
-                                        <div class="form-check form-check-inline">                                   
-                                            <input class="form-check-input ml-2" type="checkbox" id="nineteenth-march">
-                                            <label class="form-check-label" for="nineteenth-march">19/03/2022</label>
-                                        </div>
-                                    </li>  
-                                    <li class="list-inline-item">
-                                        <div class="form-check form-check-inline">                                   
-                                            <input class="form-check-input ml-2" type="checkbox" id="twenty-sixth-march">
-                                            <label class="form-check-label" for="twenty-sixth-march">26/03/2022</label>
-                                        </div>
-                                    </li>                     
-                                </ul>
-                                <!-- Booking Button and modal trigger -->  
-                                <div class="float-right mr-0">                       
-                                    <button class="btn btn-black rounded-0" id="submit-button" type="submit">
-                                        <span class="font-weight-bold">Book</span>                          
-                                    </button>
-                                </div>  
+                            <legend class="fieldset-label small text-black px-2 w-auto">Available Dates</legend>
+                            <ul class="list-inline list-unstyled text-black my-0"> 
+                                <li class="list-inline-item">
+                                    <div class="form-check form-check-inline">                                   
+                                        <input class="form-check-input ml-2" type="checkbox" id="fifth-march">
+                                        <label class="form-check-label" for="fifth-march">5/03/2022</label>
+                                    </div>
+                                </li>
+                                <li class="list-inline-item">
+                                    <div class="form-check form-check-inline">                                   
+                                        <input class="form-check-input ml-2" type="checkbox" id="twelfth-march">
+                                        <label class="form-check-label" for="twelfth-march">12/03/2022</label>
+                                    </div>
+                                </li>  
+                                <li class="list-inline-item">
+                                    <div class="form-check form-check-inline">                                   
+                                        <input class="form-check-input ml-2" type="checkbox" id="nineteenth-march">
+                                        <label class="form-check-label" for="nineteenth-march">19/03/2022</label>
+                                    </div>
+                                </li>  
+                                <li class="list-inline-item">
+                                    <div class="form-check form-check-inline">                                   
+                                        <input class="form-check-input ml-2" type="checkbox" id="twenty-sixth-march">
+                                        <label class="form-check-label" for="twenty-sixth-march">26/03/2022</label>
+                                    </div>
+                                </li>                     
+                            </ul>
+                            <!-- Booking Button and modal trigger -->  
+                            <div class="float-right mr-0">                       
+                                <button class="btn btn-black rounded-0" id="submit-button" type="submit">
+                                    <span class="font-weight-bold">Book</span>                          
+                                </button>
+                            </div>  
                         </fieldset>
                         <!-- Booking Confirmation Modal -->
                         <div class="modal fade" id="bookingModal" tabindex="-1" role="dialog" aria-labelledby="bookingModalLabel" aria-hidden="true">
-                                <div class="modal-dialog" role="document">
-                                    <div class="modal-content">
-                                        <div class="modal-header text-black">
-                                            <h5 class="modal-title" id="bookingModalLabel">Your booking is confirmed.</h5>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
-                                            </button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <p class="text-black">Thank you for booking with us. A confirmation email will be sent shortly!</p>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <a href="{% url 'home' %}" class="btn btn-black rounded-0 my-2">
-                                                <span class="icon mr-2">
-                                                    <i class="fas fa-home"></i>
-                                                </span>
-                                                <span class="text-uppercase">Go Back Home!</span>
-                                            </a>
-                                        </div>
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header text-black">
+                                        <h5 class="modal-title" id="bookingModalLabel">Your booking is confirmed.</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p class="text-black">Thank you for booking with us. A confirmation email will be sent shortly!</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <a href="{% url 'home' %}" class="btn btn-black rounded-0 my-2">
+                                            <span class="icon mr-2">
+                                                <i class="fas fa-home"></i>
+                                            </span>
+                                            <span class="text-uppercase">Go Back Home!</span>
+                                        </a>
                                     </div>
                                 </div>
+                            </div>
                         </div>                                                                          
                     </form>                           
                 </div>            

@@ -10,6 +10,7 @@
 
 .booking_title span {
     border-bottom: 4px solid #21b888;
+    justify-content: center;
 }
 
 .booking {
