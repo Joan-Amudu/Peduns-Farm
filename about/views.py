@@ -6,8 +6,11 @@ from products.models import Product
 
 
 def about(request):
-    """ A view to return about us page with recommended products section"""   
-    products = Product.objects.all()
+    """ 
+    A view to return about us page with recommended products section
+    limit to only 4 products
+    """   
+    products = Product.objects.all()[0:4] 
 
     context = {
         'products': products,
