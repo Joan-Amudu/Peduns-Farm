@@ -1,5 +1,4 @@
 from django.db import models
-from products.models import Product
 
 
 # Create your models here.
@@ -11,9 +10,12 @@ class About(models.Model):
         return self.title
 
 
-class Recommended_products(models.Model):
-    product = models.ForeignKey(Product, null=False,
-                                blank=False, on_delete=models.CASCADE)
+class Recommended_Products(models.Model):    
+    name = models.CharField(max_length=254)
+    description = models.TextField(blank=True)    
+    image_url = models.URLField(max_length=1024, null=True, blank=True)
 
     def __str__(self):
-        return self.product
+        return self.name
+  
+   
