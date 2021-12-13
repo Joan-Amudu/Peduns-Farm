@@ -1,0 +1,22 @@
+#contact-form .form-control {
+    color: #000;
+    border: 1px solid #000;
+    border-radius: 0; 
+    display: grid;        
+    justify-content: center;
+    align-items: center;  
+    
+}
+
+.contact_title span {
+    border-bottom: 4px solid #21b888;
+    justify-content: center;
+}
+
+.contact {
+    background-color: #f8f9fa;
+}
+
+
+
+
