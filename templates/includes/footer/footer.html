@@ -1,0 +1,30 @@
+
+<footer class="py-3 bg-light footer">
+    <div class="row">
+        <!-- Auto-updating copyright -->
+        <div class="col">
+            <p class="copyright">Copyright &copy; Peduns Farm; <span id="copyright"></span></p>
+        </div>
+        <div class="col">
+            <a href="documents/statements/privacy.html">Privacy Policy</a>
+            <a href="documents/statements/accessability.html">Accessibility</a>        
+        </div>
+        <div class="col">
+            <a href="https://www.github.com/Joan-Amudu" target="_blank" rel="noopener"><i class="fab fa-github mr-4"></i></a>
+            <a href="https://www.facebook.com" target="_blank" rel="noopener"><i class="fab fa-facebook mr-4"></i></a>
+            <a href="https://www.twitter.com" target="_blank" rel="noopener"><i class="fab fa-twitter mr-4"></i></a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener"><i class="fab fa-instagram mr-4"></i></a>
+        </div>
+    </div>       
+</footer>
+
+<!-- Copyright Script -->
+<script>
+    function copyrightYear() {
+        var d = new Date();
+        var y = d.getFullYear();
+        document.getElementById("copyright").innerHTML = y;
+    }
+
+    copyrightYear();
+</script>
