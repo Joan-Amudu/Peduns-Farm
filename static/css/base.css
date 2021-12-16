@@ -1,13 +1,15 @@
 html {
-    position: relative;
-    min-height: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
   }
 
 body {
     background: url('/media/home_image.jpeg') no-repeat center center fixed;
-    background-size: cover;    
+    background-size: cover;
+    overflow: hidden;    
     color: #555;
     font-family: 'Oswald';
+    
     /* sticky Footer */
     display: flex;
 	min-height: 100vh;
@@ -169,14 +171,25 @@ input[name='q']::placeholder {
 }
 
 /* -------------------------------- Footer */
+
+.statements a {
+    color: #000 !important;
+}
+
+.footer {
+    padding-left: 15%;
+}
+
 /* https://github.com/Joan-Amudu/Wild-Aussie/blob/main/static/css/style.css */  
-footer a {
+footer p a {
     font-size: 1.5em;
     padding: 0 10px;
+    margin-left: 5%;
+    justify-content: space-around;    
 }
 
 footer i {
-      color: #777777;
+    color: #000;
 }
 
 /* -------------------------------- Media Queries */
@@ -244,7 +257,8 @@ footer i {
 
 /* Custom Allauth form formatting */
 
-.account_title span {    
+.account_title,
+.statement_title span {    
     border-bottom: 4px solid #21b888;
     justify-content: center;
 }
@@ -252,6 +266,7 @@ footer i {
 .account_base {
     background-color: #f8f9fa;
 }
+
 /* Product Form */
 
 .btn-file {
@@ -303,6 +318,7 @@ footer i {
     }
 
     body {
-        height: calc(100vh - 116px);
+        overflow: hidden;
+        min-height: 100vh;
     }
 }

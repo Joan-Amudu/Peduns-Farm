@@ -3,11 +3,11 @@
     <div class="row">
         <!-- Auto-updating copyright -->
         <div class="col">
-            <p class="copyright">Copyright &copy; Peduns Farm; <span id="copyright"></span></p>
+            <p class="copyright">Copyright &copy; Peduns Farm <span id="copyright"></span></p>
         </div>
-        <div class="col">
-            <a href="static/documents/statements/privacy.html">Privacy Policy</a>
-            <a href="static/documents/statements/accessability.html">Accessibility</a>        
+        <div class="col text-black statements">
+            <a href="{% url 'privacy' %}">Privacy Policy</a>
+            <a href="{% url 'accessability' %}">Accessibility</a>        
         </div>
         <div class="col">
             <a href="https://www.github.com/Joan-Amudu" target="_blank" rel="noopener"><i class="fab fa-github mr-4"></i></a>

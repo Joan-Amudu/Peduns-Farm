@@ -1,0 +1,116 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block content %}
+    <div class="overlay"></div>
+    <div class="container-fluid h-auto">
+        <div class="row">            
+            <div class="col">
+                <h2 class="logo-font text-center text-black mt-4 mb-4 statement_title">
+                    <span>Accessability Statement</span>
+                </h2>               
+            </div>       
+        </div>
+        <div class="row text-black">
+            <!-- Source: https://github.com/Joan-Amudu/W-I-T-IT-LAB-Breast-Cancer-Awareness/blob/main/accessibility.html -->
+            <!-- Source: https://github.com/Joan-Amudu/soda-apply/blob/main/templates/pages/accessibility.html -->
+            <div>
+                <h3>Pedun's Farm</h3>
+                <p>
+                    We believe that all our users should benefit from our website and service. 
+                    We want to make sure that all our users get the service they need to get the most out of our site. 
+                    We are actively working to increase the accessibility and usability of our website and in doing so 
+                    adhere to many of the available standards and guidelines
+                </p>
+            </div>
+
+            <div>
+                <h3>Supported browsers</h3>
+                <p>
+                    The site displays correctly in current browsers listed below, and using standards 
+                    compliant HTML/CSS code means any future browsers will also display it correctly.
+                </p>
+                <ul>
+                    <li>Google Chrome</li>
+                    <li>Mozilla Firefox</li>
+                    <li>Safari</li>
+                    <li>Microsoft Edge</li>
+                    <li>Samsung Internet</li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>How to increase text size</h3>
+                <ul>
+                    <li>Google Chrome 11 and above
+                        <ul>
+                            <li>Using your mouse: Customise and control Google Chrome > Zoom</li>
+                            <li>Using your keyboard: Control key and + or – to increase or decrease text size</li>
+                        </ul>
+                    </li>
+                    <li>Firefox 3.6 and above (on PC, limited support on the Mac)
+                        <ul>
+                            <li>Using your mouse: View > Zoom > Zoom in or Zoom out</li>
+                            <li>Using your keyboard: Control key and + (plus) or – (minus) to increase or decrease text size</li>
+                        </ul>
+                    </li>
+                    <li>Safari 4 and above
+                        <ul>
+                            <li>Using your mouse: Safari > Preferences > Advanced then select minimum font size to display</li>
+                            <li>Using your keyboard: Command key and + (plus) or – (minus) to increase or decrease text size</li>
+                        </ul>
+                    </li>
+                    <li>Microsoft Edge
+                        <ul>
+                            <li>Using your mouse: Menu > Zoom > select + (plus) or - (minus) to increase or decrease text size</li>
+                            <li>Using your keyboard: Control key and + (plus) or – (minus) to increase or decrease text size</li>
+                        </ul>
+                    </li>
+                    <li>Samsung Internet
+                        <ul>
+                            <li>More Options icon > Settings > Screen and text > Use the text scaling slider to increase or decrease text size</li>
+                            <li>You can also enable the Text booster (by touching the checkbox next to 'Text booster') to have the text size on web pages change automatically for easier reading on your device</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>How to listen to our site</h3>
+                <p>
+                    Some operating systems also have built-in accessibility features that can read text aloud, 
+                    or magnify parts of the screen. If you have your own screen reading software you should find it works well on our site.
+                </p>
+            </div>
+
+            <div>
+                <h3>The speed of our site</h3>
+                <p>
+                    We know that site speed is important to our members and we strive to deliver as fast a site as possible. 
+                    However, there are additional external factors which can influence the speed at which you can view our site. 
+                    These can include your Internet speed and the performance of your Internet Service Provider, 
+                    as well as the number of users browsing at any one time.
+                </p>
+            </div>
+
+            <div>
+                <h3>Screen resolution</h3>
+                <p>
+                    This site is designed for fully responsive viewing, from a width of 320px to a width of 2000px.
+                </p>
+            </div>
+
+            <div>
+                <p>
+                    Whilst Peduns Farm strive to adhere to the accepted guidelines and standards for accessibility and usability, 
+                    it is not always possible to do so in all areas of the website.
+                </p>
+                <p>
+                    We are continually seeking out solutions that will bring all areas of the site up to the same level of overall 
+                    <a href="https://www.nomensa.com/services/web-accessibility" target="_blank" rel="noreferrer">web accessibility</a>. 
+                    In the meantime, should you experience any difficulty in accessing our website, please do not hesitate to <a href="{% url 'contact' %}">contact us</a>.
+            </div>          
+        </div>                
+    </div>
+{% endblock %}
