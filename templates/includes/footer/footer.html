@@ -6,8 +6,8 @@
             <p class="copyright">Copyright &copy; Peduns Farm; <span id="copyright"></span></p>
         </div>
         <div class="col">
-            <a href="documents/statements/privacy.html">Privacy Policy</a>
-            <a href="documents/statements/accessability.html">Accessibility</a>        
+            <a href="static/documents/statements/privacy.html">Privacy Policy</a>
+            <a href="static/documents/statements/accessability.html">Accessibility</a>        
         </div>
         <div class="col">
             <a href="https://www.github.com/Joan-Amudu" target="_blank" rel="noopener"><i class="fab fa-github mr-4"></i></a>
@@ -20,11 +20,5 @@
 
 <!-- Copyright Script -->
 <script>
-    function copyrightYear() {
-        var d = new Date();
-        var y = d.getFullYear();
-        document.getElementById("copyright").innerHTML = y;
-    }
-
-    copyrightYear();
+  $("#copyright").text(new Date().getFullYear()); 
 </script>

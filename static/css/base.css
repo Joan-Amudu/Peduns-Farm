@@ -1,14 +1,27 @@
 html {
-    height: 100%;
-}
+    position: relative;
+    min-height: 100%;
+  }
 
 body {
     background: url('/media/home_image.jpeg') no-repeat center center fixed;
     background-size: cover;    
-    height: calc(100vh - 164px);
     color: #555;
     font-family: 'Oswald';
-    
+    /* sticky Footer */
+    display: flex;
+	min-height: 100vh;
+	flex-direction: column;    
+}
+ /* sticky Footer */
+ /* https://github.com/Joan-Amudu/Wild-Aussie/blob/main/static/css/style.css */
+main {
+	flex: 1 0 auto;
+}
+
+/*main content*/
+.content {
+	padding: 3%;
 }
 
 /* from Bulma */
@@ -155,15 +168,8 @@ input[name='q']::placeholder {
     overflow-y: auto;
 }
 
-.footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: 3.75rem;
-    line-height: 1.85rem;
-}
-   
-   
+/* -------------------------------- Footer */
+/* https://github.com/Joan-Amudu/Wild-Aussie/blob/main/static/css/style.css */  
 footer a {
     font-size: 1.5em;
     padding: 0 10px;

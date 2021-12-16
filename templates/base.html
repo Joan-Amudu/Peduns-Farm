@@ -35,7 +35,7 @@
 
     <title>Peduns Farm {% block extra_title %}{% endblock %}</title>
   </head>
-  <body>
+  <body class="d-flex flex-column">
     
     <header>
       <nav class="navbar navbar-expand-lg navbar-light bg-light">        
@@ -144,7 +144,8 @@
       </nav>
     </header>
 
-    
+    <section>
+      <!--Toasts-->
       {% if messages %}
         <div class="message-container">
           {% for message in messages %}
@@ -162,22 +163,23 @@
           {% endfor %}
         </div>
       {% endif %}
+    </section>
 
       {% block page_header %}
       {% endblock %}
 
+    <main class="content">
       {% block content %}
       {% endblock %}
+    </main>
 
       {% block footer %}
         {% include 'includes/footer/footer.html' %}
       {% endblock %}
 
       {% block postloadjs %}
-        <script type="text/javascript">          
-          
-          $('.toast').toast('show');
-         
+        <script type="text/javascript">       
+          $('.toast').toast('show');         
         </script>
       {% endblock %}
 
