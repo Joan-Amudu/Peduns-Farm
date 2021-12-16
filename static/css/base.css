@@ -242,6 +242,16 @@ footer i {
 	color: #17a2b8; /* text-info */
 }
 
+/* Custom Allauth form formatting */
+
+.account_title span {    
+    border-bottom: 4px solid #21b888;
+    justify-content: center;
+}
+
+.account_base {
+    background-color: #f8f9fa;
+}
 /* Product Form */
 
 .btn-file {
