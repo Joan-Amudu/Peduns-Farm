@@ -1,108 +1,253 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
-Welcome Joan Amudu,
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+Click [here](https://peduns-farm.herokuapp.com/) for the deployed site.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+## About  
 
-## Gitpod Reminders
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
 
-`python3 -m http.server`
 
-A blue button should appear to click: _Make Public_,
+## **Table of content** 
 
-Another blue button should appear to click: _Open Browser_.
+- [User Experience (UX)](#user-experience--ux-)
+    - [Strategy](#strategy)
+      - [User stories](#user-stories)
+    - [Scope](#scope)
+    - [Structure](#structure)
+    - [Skeleton](#skeleton)
+    - [Design](#design)
+  - [Features](#features)
+    - [Existing features](#existing-features)
+    - [Future Development Features](#future-development-features)
+    - [Failed Features](#failed-features)
+  - [Technologies Used](#technologies-used)
+    - [Languages](#languages)    
+    - [Libraries, Frameworks and Templates](#libraries-frameworks-and-templates)
+    - [Other technologies](#other-technologies)
+    -  
+  - [Testing](#testing)
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+- [Deployment](#deployment)
+  - [Deploying to Heroku](#deploying-to-heroku)
+  - [Forking](#forking)
+  - [Making a Local Clone](#making-a-local-clone)
 
-A blue button should appear to click: _Make Public_,
+   - [Credits](#credits)
+     - [Code](#code)
+     - [Content](#content)
+     - [Media](#media)
+     - [Acknowledgment](#acknowledgments)
 
-Another blue button should appear to click: _Open Browser_.
+*** 
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+## User Experience (UX)
+## Strategy
 
-To log into the Heroku toolbelt CLI:
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+### User Stories 
 
-------
 
-## Release History
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+#### [Back to top](<#table-of-content>)
+***
+## Scope
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+User expectations
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+#### [Back to top](<#table-of-content>)
+***
+## Structure
+#### Database
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+#### [Back to top](<#table-of-content>)
+***
+## Skeleton
+### Wireframes
+* Wireframes were created using the [Balsamiq](https://balsamiq.com/wireframes/) software.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+![Home](static/images/wireframes/home.png)
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+* All Wireframes
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+#### [Back to top](<#table-of-content>)
+***
+## Design
+The webiste's design and layout is based on fonts, colors, wireframes, images and icons.
 
-------
+### Fonts
+* Google Fonts **Oswald** is used as the main font and **sans-serif** as the fallback font.
 
-## FAQ about the uptime script
+### Color Scheme
+The color palatte for this project is very minimal, with the default bg-light for navbar and footer.
 
-**Why have you added this script?**
+* **border-botton: #21b888;** 
+    * used to repalve the horizontal rule on all titles. This shade of green is also a represenation of thgreen color in nature and also most farms.
+* **background-color: #f8f9fa;**
+    * used on all forms; including allauth forms.
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
 
-**How will this affect me?**
+#### [Back to top](<#table-of-content>)
+***
+## Features
+### Existing Features
+Below are some of the existing features
+* Responsive Navbar
+* Social Media links
+* Registration page
+* Contact us page
+* Log in page
+* user profile page
+* Search functionality
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+### Future Development Features
+Below are some features to be implemented at a later stage
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
 
-**So….?**
+### Failed Features
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
 
-**Can I opt out?**
+ 
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+* The commets section was taken out and  replaced with edit and delete functionalities on the show_post.html
+#### [Back to top](<#table-of-content>)
+***
+## Technologies Used
+### Languages
+* HTML5
+* CSS3
+* JavaScript
+* Python
+### Libraries, Frameworks and Templates
+* [Django](https://docs.djangoproject.com/en/4.0/)
+* [jquery](https://jquery.com/)
+* [jinja templates](https://jinja.palletsprojects.com/)
+* [Bootstrap](https://getbootstrap.com/docs/4.0/getting-started/introduction/)
+
+### Other Technologies
+
+* [Font Awesome](https://fontawesome.com/)
+
+### Database Used
+* 
+
+#### [Back to top](<#table-of-content>)
+***
+## Testing
+
+
+#### [Back to top](<#table-of-content>)
+***
+
+## Deployment
+
+**Deploying to [Heroku](https://dashboard.heroku.com/)**
+
+* You will need an account to sign up to [Heroku](https://www.heroku.com)
+* Once logged in click the create new app button
+* Select the region closest to you and give the APP a name
+* Set your deployment method to 'GitHub'
+* Connect to GitHub and login
+* Search for the repository you wish to deploy from
+* You will need to head to settings and click 'Config Vars' to set the enviromnents.
+    * You will now need to set up your Configuration Vars the same way as you did for your env.py
+    - **Set environment in Heroku App** 
+      - Go to settings, then click on reveal config vars
+      - Enter your key value pairs as per your env.py file (without the inverted commas)
+    
+* Make sure you have set up your Procfile and you have updated the requirements.txt prior to deploying    
+ - Enable automatic deploys      
+* Once it is deployed you will be able to view the app
+
+
+### Forking
+
+Forking the GitHub Repository
+
+By forking the GitHub Repository, you can make a copy of the original repository in your own GitHub account.  This means we can view or make changes without making the changes affecting the original.
+
+      You can make a copy of the GitHub Repository by "forking" the original repository onto your own account, where changes can be made without affecting the original repository by taking the following steps: 
+
+   
+1. Login to your account on [Github](https://github.com/).
+2. Locate the [Repository](https://github.com/Joan-Amudu/Peduns-Farm) used for this project.
+3. On the right-hand side of the Repository name, you'll see the 'Fork' button.
+4. This will create a copy in your personal repository.
+5. Once you're finished making changes, return to original repository and press 'New Pull Request' to request your changes to be merged into the original project.
+
+### Making a Local Clone
+
+1. Log in to [GitHub]() and 
+2. Locate the [GitHub Repository](https://github.com/Joan-Amudu/Peduns-Farm).
+3. Under the repository name, click Code.
+4. To clone the repository, select HTTPS and copy the link.
+5. Open Git Bash.
+6. Change the current working directory to the location where you want the cloned directory to be made.
+7. Type **git clone**, and then paste the URL you copied in Step 4.
 
 ```
-pkill uptime.sh
-rm .vscode/uptime.sh
+ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
 ```
+    * To clone this particular repository:
+    git clone https://github.com/Joan-Amudu/Peduns-Farm
 
-**Anything more?**
+7. Press Enter. Your local clone will be created.
+8. Change into the directory being created.
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository) for more information about cloning repositories. 
 
----
 
-Happy coding!
+#### [Back to top](<#table-of-content>)
+***
+## Credits
+
+### Code
+This project is only possible because of the contibution of others to the community. While I have used code from external sources and past projects, I always aim to customise the code to make it fit well with my own project, and as such, it is difficult to pin point exact lines of code from external soucres. However, where exact code has been used and not altered at all, I have added comments and acknowledge the source within the code itself.
+
+#### Overall Structure
+* The overall structure and code of this porject was derived from following Code Institutes's [Boutique Ado.](https://github.com/Code-Institute-Solutions/boutique_ado_v1)
+
+
+#### Footer
+* The footer was taken from my previous [Milestone Project](https://github.com/Joan-Amudu/Wild-Aussie)
+
+#### Privacy Policy and Accessablity Statement
+    These statments were derived from previous hackathons I had participated in, specifically
+    * [Bust IT: Cancer Without Borders](https://vanessacleary.github.io/W-I-T-IT-LAB-Breast-Cancer-Awareness/)
+    * [SODA Apply](https://soda-apply.herokuapp.com/)
+
+### Images
+
+#### [Pexels](https://www.pexels.com/) 
+* [Ella Olson](https://www.pexels.com/@ella-olsson-572949)
+* [Alesia Kozik](https://www.pexels.com/@alesiakozik)
+* [Antarar Verma](https://www.pexels.com/@antaraphotoshoots)
+* [Pixabay](https://www.pexels.com/@pixabay)
+* [Engin Akyurt](https://www.pexels.com/@enginakyurt)
+* [Casa Norte](https://www.pexels.com/@casa-norte-23254957)
+* [Lisa](https://www.pexels.com/@fotios-photos)
+* [Aphiwat chuangchoem](https://www.pexels.com/@fecundap6)
+* [Townsend Walton](https://www.pexels.com/@townsend-walton-6231368)
+* [Mali madder](https://www.pexels.com/@mali)
+
+
+
+
+
+#### [Back to top](<#table-of-content>)
+***
+## Acknowledgements
+I appreciate the guidance is recieved from my mentor Brain Macharia
+
+
+#### [Back to top](<#table-of-content>)
+***
