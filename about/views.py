@@ -8,14 +8,14 @@ from products.models import Product
 def about(request):
     """
     A view to return about us page with recommended products section
-    Recommended Products are shuffled 
+    Recommended Products are shuffled
     """
 
     products = list(Product.objects.all())
-    random.shuffle(products) 
+    random.shuffle(products)
 
     context = {
         'products': products,
     }
 
-    return render(request, 'about/about_us.html', context)       
+    return render(request, 'about/about_us.html', context)
