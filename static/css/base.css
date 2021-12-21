@@ -193,14 +193,7 @@ footer i {
     color: #000;
 }
 
-/* -------------------------------- Media Queries */
 
-/* Slightly larger container on xl screens */
-@media (min-width: 1200px) {
-  .container {
-    max-width: 80%;
-  }
-}
 
 /* Allauth form formatting */
 
@@ -258,7 +251,7 @@ footer i {
 
 /* Custom Allauth form formatting */
 
-.account_title,
+.account_title span,
 .statement_title span {    
     border-bottom: 4px solid #21b888;
     justify-content: center;
@@ -296,6 +289,14 @@ footer i {
     border-radius: 0;
 }
 
+/* -------------------------------- Media Queries */
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+    .container {
+      max-width: 80%;
+    }
+  }
 
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
@@ -310,6 +311,10 @@ footer i {
     .header-container {
         padding-top: 164px;
     }
+
+    .home {
+        padding-top: 20%;
+    }
 }
 
 /* pad the top a bit when navbar is collapsed on mobile */
@@ -320,6 +325,6 @@ footer i {
 
     body {
         overflow: hidden;
-        min-height: 100vh;
+        
     }
 }
