@@ -78,11 +78,9 @@
                      </div>
                   </li>
                   <!-- Account -->        
-                  <li class="font-weight-bold list-inline-item dropdown">
+                  <li class="font-weight-bold nav-item dropdown">
                      <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <div class="text-center">
-                           <p class="my-0">My Account</p>
-                        </div>
+                        My Account                        
                      </a>
                      <div class="dropdown-menu border-0" aria-labelledby="user-options">
                         {% if request.user.is_authenticated %}
@@ -97,6 +95,21 @@
                         {% endif %}
                      </div>
                   </li>
+                  <!-- Shopping Cart -->
+               
+                  <li class="font-weight-bold nav-item">
+                     <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_cart' %}">
+                        <i class="fas fa-shopping-cart">
+                           <span>                              
+                              {% if grand_total %}
+                              ${{ grand_total|floatformat:2 }}
+                              {% else %}
+                              $0.00
+                              {% endif %}
+                           </span>
+                        </i>                     
+                     </a>
+                  </li>               
                </ul>
                <!-- Search form -->
                <form class="form-inline my-2 my-lg-0" method="GET" action="{% url 'products' %}">
@@ -110,24 +123,7 @@
                         </button>
                      </div>
                   </div>
-               </form>
-               <!-- Shopping Cart -->
-               <ul class="navbar-nav right">
-                  <li class="font-weight-bold list-inline-item">
-                     <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_cart' %}">
-                        <div class="text-center">
-                           <div><i class="fas fa-shopping-cart"></i></div>
-                           <p class="my-0">
-                              {% if grand_total %}
-                              ${{ grand_total|floatformat:2 }}
-                              {% else %}
-                              $0.00
-                              {% endif %}
-                           </p>
-                        </div>
-                     </a>
-                  </li>
-               </ul>
+               </form>               
             </div>
          </nav>
       </header>
