@@ -3,10 +3,10 @@ from .models import UserBooking
 
 
 class BookingForm(forms.ModelForm):
+    """ Booking Form"""
     class Meta:
         model = UserBooking
         fields = ('full_name', 'email', 'number_of_people',)
-                  
 
     def __init__(self, *args, **kwargs):
         """
