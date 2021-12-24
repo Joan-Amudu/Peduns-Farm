@@ -11,14 +11,15 @@ from .forms import ProductForm
 
 
 def all_products(request):
-    """ A view to display all products, including sorting and search queries """
+    """
+    A view to display all products, including sorting and search queries
+    """
 
     products = Product.objects.all()
     sort = None
-    direction = None 
+    direction = None
     query = None
     categories = None
-
 
     if request.GET:
         if 'sort' in request.GET:
@@ -28,7 +29,7 @@ def all_products(request):
                 sortkey = 'lower_name'
                 products = products.annotate(lower_name=Lower('name'))
             if sortkey == 'category':
-                sortkey ='category__name'
+                sortkey = 'category__name'
 
             if 'direction' in request.GET:
                 direction = request.GET['direction']
@@ -40,7 +41,6 @@ def all_products(request):
             categories = request.GET['category'].split(',')
             products = products.filter(category__name__in=categories)
             categories = Category.objects.filter(name__in=categories)
-
 
         if 'q' in request.GET:
             query = request.GET['q']
@@ -94,7 +94,7 @@ def add_product(request):
                             Please ensure the form is valid.')
     else:
         form = ProductForm()
-        
+
     template = 'products/add_product.html'
     context = {
         'form': form,
@@ -143,6 +143,6 @@ def delete_product(request, product_id):
         return redirect(reverse('home'))
 
     product = get_object_or_404(Product, pk=product_id)
-    product.delete()  
+    product.delete()
     messages.success(request, 'Product deleted!')
     return redirect(reverse('products'))
