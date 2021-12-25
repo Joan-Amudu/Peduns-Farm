@@ -13,7 +13,7 @@ def contact(request):
             'email': request.POST['email'],
             'message': request.POST['message'],
         }
-    contact_form = ContactForm(form_data)
+    contact_form = ContactForm()
     template = 'contact/contact.html'
     context = {
         'contact_form': contact_form,

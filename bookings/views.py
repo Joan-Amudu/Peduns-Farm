@@ -13,7 +13,7 @@ def booking(request):
             'number_of_people': request.POST['number_of_people'],
             'date': request.POST['date'],
         }
-    booking_form = BookingForm(form_data)
+    booking_form = BookingForm()
     template = 'bookings/booking.html'
     context = {
         'booking_form': booking_form,
