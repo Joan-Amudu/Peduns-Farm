@@ -106,10 +106,28 @@
             </div>
         </div>
     </div>
+    <!--Back to top button -->
+    <div class="back-to-top rounded-0">        
+        <button>
+            <span>
+                <a class="btt-link d-flex h-100">         
+                    <i class="fas fa-caret-up text-black mx-auto my-auto"></i>                             
+                </a>       
+            </span>
+            Back to top
+        </button>
+    </div> 
 {% endblock %}
 
 {% block postloadjs %}
     {{ block.super }}
+    <!--Back to top functionality -->
+    <script type="text/javascript">
+        $('.back-to-top').click(function(e) {
+            window.scrollTo(0,0)
+        })
+    </script>
+
     <script type="text/javascript">
         $('#sort-selector').change(function(){
             var selector = $(this);

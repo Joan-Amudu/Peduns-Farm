@@ -154,7 +154,7 @@
     {% endblock %}
     <!-- Main Content -->
     <main class="content">
-        {% block content %}
+        {% block content %}              
         {% endblock %}
     </main>
     <!-- Footer -->
@@ -163,15 +163,13 @@
     {% endblock %}
     <!-- Post Load JavaScript -->
     {% block postloadjs %}
-    <script type="text/javascript">
-        $('.toast').toast('show');
-
+    <script type="text/javascript">      
         /*
-        20 Seconds Time out function for toast messages
+        15 Seconds Time out function for toast messages
         */
         setTimeout(function() {
             $('#toastmessage').fadeOut('fast');
-        }, 20000);
+        }, 15000);
     </script>
     {% endblock %}
 </body>
