@@ -163,8 +163,15 @@
     {% endblock %}
 
     <!-- Post Load JavaScript -->
-    {% block postloadjs %}
-    
+    {% block postloadjs %}   
+        <!-- Toast message with 10 second timeout functionality-->    
+        <script type="text/javascript">  
+            $('.toast').toast('show');    
+        
+            setTimeout(function() {
+                $('#toastmessage').fadeOut('fast');
+            }, 10000);
+        </script>
     {% endblock %}
 </body>
 
