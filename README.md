@@ -69,13 +69,25 @@ User expectations
 ***
 ## Skeleton
 ### Wireframes
-* Wireframes were created using the [Balsamiq](https://balsamiq.com/wireframes/) software.
-
-![Home](static/images/wireframes/home.png)
-
-* All Wireframes
+  Wireframes were created using the [Balsamiq](https://balsamiq.com/wireframes/) software.
+  * **Home**
+  ![Home](static/documents/wireframes/home.png)
 
 
+  All Wireframes
+  * [About Us](static/documents/wireframes/about-us.png)
+  * [Fruit Picking](static/documents/wireframes/fruit-picking.png)
+  * [Contact Us](static/documents/wireframes/contact-us.png)
+  * [Products](static/documents/wireframes/products.png)
+  * [Cart](static/documents/wireframes/cart.png)
+  * [login](static/documents/wireframes/login.png)
+  * [Profile](static/documents/wireframes/profile.png)
+  * [Product Management](static/documents/wireframes/product-management.png)
+  * [Register](static/documents/wireframes/register.png)
+  * [Checkout](static/documents/wireframes/checkout.png)
+  * [Password Reset](static/documents/wireframes/password-reset.png)
+
+A pdf of the wireframes can be found [here](static/documenst/wireframes/peduns-farm.pdf), by clicking on the download button in Github. (**Please Note:** _[Adobe Acrobat Reader](https://get.adobe.com/reader/) is required to view files in pdf format_).
 
 
 #### [Back to top](<#table-of-content>)
@@ -91,9 +103,6 @@ The color palatte for this project is very minimal, with the default bg-light fo
 
 * **border-botton: #21b888;** 
     * used to repalve the horizontal rule on all titles. This shade of green is also a represenation of thgreen color in nature and also most farms.
-* **background-color: #f8f9fa;**
-    * used on all forms; including allauth forms.
-
 
 #### [Back to top](<#table-of-content>)
 ***
@@ -116,9 +125,6 @@ Below are some features to be implemented at a later stage
 ### Failed Features
 
 
- 
-
-* The commets section was taken out and  replaced with edit and delete functionalities on the show_post.html
 #### [Back to top](<#table-of-content>)
 ***
 ## Technologies Used
