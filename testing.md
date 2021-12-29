@@ -39,33 +39,40 @@
 |TC0028||Click plus quantity button|Increases quantity|Pass|
 |TC0029||Manually input valid quantity number (0-99)|Value accepted and can be added to cart|Pass|
 |TC0030||Manually input invalid quantity number(e.g -1 or 100) |Warning message when adding to cart|Pass|
-|TC0031|||||
-|TC0032|||||
-|TC0033|||||
-|TC0034|||||
-|TC0035|||||
-|TC0036|||||
-|TC0037|||||
-|TC0038|||||
-|TC0039|||||
-|TC0040|||||
-|TC0041|||||
-|TC0042|||||
-|TC0043|||||
-|TC0044|||||
-|TC0045|||||
-|TC0046|||||
-|TC0047|||||
-|TC0048|||||
-|TC0049|||||
-|TC0050|||||
-
+|TC0031||Click Keep Shopping button|Re-direct user to products page|Pass
+|TC0032||Click add to cart|Product added to cart, preview of shopping cart and amount displayed|Pass|
+|TC0033||Click add to cart|Success Toast message|Pass|
+|TC0034||Click plus button to increase the number of quantity|Shopping cart preview and amount updated accordingly| Pass|
+|TC0035|**Shopping Cart**|CLick cart icon from navbar|Direct user to shopping cart page|Pass|
+|TC0036||If shopping cart is empty, click keep shopping|Direct user to products page |Pass
+|TC0037||If products exist, click minus or plus buttons to reduce or increase quantity and click update|Quantity increases or decreases accordingly and price updated as well|Pass|
+|TC0038||Clicking minus button to 0 quantity and click update|Product is deleted from shopping cart|Pass| Success alert message  displayed
+|TC0039||Click Secure Checkout button|Directs user to Checkout page|Pass| Checkout page displays checkout form and order summary
+|TC0040|**Checkout Page**|Click Checkout button with empty form|Form will not submit as all required fields need to be filled out|Pass|Popup warning message asking user to fill in form fields
+|TC0041||Enter invalid acrd number on card payment field| Your card number is invalid message is displayed |Pass|
+|TC0042||Enter valid card payment details|Payment processing is displayed|Pass|Sucessful payment after processing with complted order details displayed.
+|TC0043|**Product Management**|Click Product management dropdown item|Directs Admin to add a product page|Pass|Product Management details only visible to staff with admin previledges
+|TC0044||Add product details without image|Default no-image image will be displayed|Pass|
+|TC0045||Click edit on any product|Directs Admin to edit product page|Pass|Alert message informing the admin of the specific product they are editing
+|TC0046||Click delete on any product|Directs Adim to delete product manage|Pass|
+|TC0047||Delete product page: click yes|Deletes the product|Pass|
+|TC0048||Delete product page: click Cancel|Re-directs Admin back to products page|Pass|
 
 
 #### [Back to top](<#table-of-content>)
+
 ## Browser Compatibility
+This project was tested successfully on the following browsers
+* Google Chrome
+* Microsoft Edge
+* Firefox
+* Safari
 #### [Back to top](<#table-of-content>)
+
 ## Responsiveness
+This project was built using [Bootstrap 4](https://getbootstrap.com/docs/4.6/getting-started/introduction/), which is used to quickly design and customize responsive mobile-first sites. 
 #### [Back to top](<#table-of-content>)
+
 ## User Stories
+
 #### [Back to top](<#table-of-content>)

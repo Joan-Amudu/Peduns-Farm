@@ -43,10 +43,26 @@ Click [here](https://peduns-farm.herokuapp.com/) for the deployed site.
 ## User Experience (UX)
 ## Strategy
 
-
-
 ### User Stories 
+* As a user I want to know what the farm is about 
+* As a user I want to easily find eco boxes.
+* As I user I want to know the price of the products.
+* As a user I want to be able to find products of similar category
+* As a user I want to be able to search for products by prize, so that I know what products are cheap and which are expensive
+* As a user I want to be able to checkout easily and securely
+* As a user I want to be able to use direrent payment methods
+* As a User I want to save my details so I easily checkout next time 
+* As a User I want to have a record of my purchase order
+* As a User I want to be able to contact the farm 
+* As a User I want to visit the farm 
+* As a User I want to pick my own produce when possible
+* As a User I want to have an online account 
 
+### Clients Stories
+* As an administrator, I can manage and maintain the e-commerce store.
+* As an administrator, I can adjust any product.
+* As an administrator, I can add more products.
+* As an administrator, I can delete products.
 
 
 
@@ -116,13 +132,13 @@ Below are some of the existing features
 * Log in page
 * user profile page
 * Search functionality
-
+* Admin profile
+* Secure Checkout
 
 ### Future Development Features
 Below are some features to be implemented at a later stage
-
-
-### Failed Features
+* Social media login/registration functionality
+* Paypal payments 
 
 
 #### [Back to top](<#table-of-content>)
@@ -168,11 +184,45 @@ Below are some features to be implemented at a later stage
     * You will now need to set up your Configuration Vars the same way as you did for your env.py
     - **Set environment in Heroku App** 
       - Go to settings, then click on reveal config vars
-      - Enter your key value pairs as per your env.py file (without the inverted commas)
+      - Enter your key value pairs as per your settings.py file, including AWS and STRIPE
     
 * Make sure you have set up your Procfile and you have updated the requirements.txt prior to deploying    
  - Enable automatic deploys      
 * Once it is deployed you will be able to view the app
+
+## AWS
+Amazon Web Services, specifically s3 bucket is used to store the media files (A user account is required to use this service)
+  - Creating an acount at https://aws.amazon.com/
+
+  - Create an s3 bucket, follow the documentation of how to set your zone, permission ...
+
+  - Create a user group and its policy
+
+  - create a user for this group
+
+  - Install django-storage/boto3, connecting the bucket to the repo by adding storage to the apps in setting.py. adding the following to my setting.py :
+
+  **Bucket Configurations**
+
+          
+            AWS_STORAGE_BUCKET_NAME = 'peduns-farm'
+            AWS_S3_REGION_NAME = 'eu-north-1'
+            AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+            AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+            AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+
+  **Static and media files**
+
+            STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+            STATICFILES_LOCATION = 'static'
+            DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+            MEDIAFILES_LOCATION = 'media'
+
+  **Override static and media URLs in production**
+
+            STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
+            MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
+
 
 
 ### Forking
@@ -244,9 +294,6 @@ This project is only possible because of the contibution of others to the commun
 * [Aphiwat chuangchoem](https://www.pexels.com/@fecundap6)
 * [Townsend Walton](https://www.pexels.com/@townsend-walton-6231368)
 * [Mali madder](https://www.pexels.com/@mali)
-
-
-
 
 
 #### [Back to top](<#table-of-content>)
