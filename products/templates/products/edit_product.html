@@ -2,39 +2,40 @@
 {% load static %}
 {% block extra_title %} Edit Product {% endblock %}
 
-{% block content %}
-    <div class="overlay"></div>
-    <div class="container">
-        <div class="row">
-            <div class="col-12 col-md-6">
-                <div class="col">                
-                    <h2 class="logo-font text-center text-black mb-4 products_title">
-                        <span>Product Management</span>
-                    </h2>
-                    <h5 class="text-muted text-center">Edit a Product</h5>                
-                </div>                
-            </div>
-        </div>
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'products/css/products.css' %}">
+{% endblock %}
 
-        <div class="row">
-            <div class="col-12 col-md-6">
-                <form method="POST" action="{% url 'edit_product' product.id %}" class="form mb-2" enctype="multipart/form-data">
-                    {% csrf_token %}
-                    {% for field in form %}
-                        {% if field.name != 'image' %}
-                            {{ field | as_crispy_field }}
-                        {% else %}
-                            {{ field }}
-                        {% endif %}
-                    {% endfor %}
-                    <div class="text-right">
-                        <a class="btn btn-outline-black rounded-0" href="{% url 'products' %}">Cancel</a>
-                        <button class="btn btn-black rounded-0" type="submit">Update Product</button>
-                    </div>
-                </form>
-            </div>            
-        </div>
+{% block content %}
+<div class="overlay"></div>
+<div class="container">
+    <div class="row">            
+        <div class="col">                
+            <h2 class="logo-font text-center text-black mb-4 products_title">
+                <span>Product Management</span>
+            </h2>
+            <h5 class="text-muted text-center">Edit a Product</h5>                
+        </div>       
     </div>
+    <div class="row">
+        <div class="col-12 col-md-6 offset-md-3">
+            <form method="POST" action="{% url 'edit_product' product.id %}" class="form mb-2" enctype="multipart/form-data">
+                {% csrf_token %}
+                {% for field in form %}
+                    {% if field.name != 'image' %}
+                        {{ field | as_crispy_field }}
+                    {% else %}
+                        {{ field }}
+                    {% endif %}
+                {% endfor %}
+                <div class="text-right">
+                    <a class="btn btn-outline-black rounded-0" href="{% url 'products' %}">Cancel</a>
+                    <button class="btn btn-black rounded-0" type="submit">Update Product</button>
+                </div>
+            </form>
+        </div>            
+    </div>
+</div>
 {% endblock %}
 
 {% block postloadjs %}
