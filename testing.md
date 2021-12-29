@@ -74,5 +74,54 @@ This project was built using [Bootstrap 4](https://getbootstrap.com/docs/4.6/get
 #### [Back to top](<#table-of-content>)
 
 ## User Stories
+### User Stories 
+* As a user I want to know what the farm is about
+    - This is achieved from the About us section.
+    - Users can also follow the farms social media accounts
+* As a user I want to easily find eco boxes.
+    - The nav bar has an eco boxes nav link which directs the user to all available eco boxex
+* As I user I want to know the price of the products.
+    - Prices are displayed on all products. Furthermore, users can shop and sort products by prices.
+* As a user I want to be able to find products of similar category
+    - This is achieved through the By categories dropdown item, which sorts and dispalys products by their category
 
+    ![Sort by category](static/documents/screenshots/categories.png)
+
+* As a user I want to be able to search for products by price, so that I know what products are cheap and which are expensive
+    - This can be achieves´d in two ways: 
+    - First, by using the products nav dropdown, users can select products by price. By deafult, products are sorted by price from low to high
+
+        ![Search by price from Navbar](static/documents/screenshots/price-default.png)
+
+
+    - The second option is to sort prices from the sort dropdown menu, here users can sort prices from low to high or high to low
+        ![Search by price sort bar](static/documents/screenshots/price-high-low.png)
+
+* As a user I want to be able to checkout easily and securely
+    - This site was developed to handle secure payments using scripe.
+    - For example inavlid card numbers throw errors
+        ![Search by price from Navbar](static/documents/screenshots/secure-checkout.png)
+
+* As a User I want to save my details so I easily checkout next time
+    - By registering to the site, users will have a profile page where they can update their contact information any time.
+    - User profiles will aslo contain order histories.
+* As a User I want to have a record of my purchase order
+    - User profiles contain order histories.
+* As a User I want to be able to contact the farm 
+* As a User I want to visit the farm
+    - A contact us page has information on the farms location. Users can aslo write to the farm via email or contact us form to enquire more about the farm, products and visiting policies.
+    
+* As a User I want to pick my own produce when possible
+    - Through the Fruit picking booking page, users can book and vivit the farm when its open for visitors.
+ 
+
+### Clients Stories
+* As an administrator, I can manage and maintain the e-commerce store.
+* As an administrator, I can adjust any product.
+* As an administrator, I can add more products.
+* As an administrator, I can delete products.
+    - All client stories above are in relation to product management, and only registered staff member(Administrator) can manage the site. Product management functionality is only visible to staff.
+    - Administrators can also adjust, edit or delete any products.
+
+    ![Search by price from Navbar](static/documents/screenshots/product-management.png)
 #### [Back to top](<#table-of-content>)

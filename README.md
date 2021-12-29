@@ -64,22 +64,32 @@ Click [here](https://peduns-farm.herokuapp.com/) for the deployed site.
 * As an administrator, I can add more products.
 * As an administrator, I can delete products.
 
-
-
+### Future Implementations
+#### User stories
+* As a user I want to be able to use direrent payment methods
+  - Other pyaments such as paypal, klarna can be implemented in the future to give users other secure payment options.
 
 #### [Back to top](<#table-of-content>)
 ***
 ## Scope
 
 User expectations
-
+* Purchase products
+* Adjust products quantity
+* Delete products
+* Create user account
+* Secure payment processing
+* Contact the farm
+* Stay up to date by following the farm via social media
+* Privacy Policy
+* Accessability statement
 
 
 #### [Back to top](<#table-of-content>)
 ***
 ## Structure
 #### Database
-
+This site uses PostgreSQL provided by heroku.
 
 #### [Back to top](<#table-of-content>)
 ***
@@ -156,11 +166,12 @@ Below are some features to be implemented at a later stage
 * [Bootstrap](https://getbootstrap.com/docs/4.0/getting-started/introduction/)
 
 ### Other Technologies
-
+* [Amazon AWS](https://aws.amazon.com/)
+* [Stripe](https://stripe.com/gb)
 * [Font Awesome](https://fontawesome.com/)
 
 ### Database Used
-* 
+* [Postgresql](https://www.postgresql.org/) provided by Heroku
 
 #### [Back to top](<#table-of-content>)
 ***
