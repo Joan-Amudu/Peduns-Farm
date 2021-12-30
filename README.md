@@ -1,11 +1,10 @@
-
+# **PEDUNS FARM**
 
 Click [here](https://peduns-farm.herokuapp.com/) for the deployed site.
 
-# About  
-
-
-
+## **About**  
+Peduns Farm offers freshly harvested farm produce to the comminuty for sale. 
+Clients can select from a variety of farm fruits and vegetables for purchse though our secure online shop.
 
 ## **Table of content** 
 

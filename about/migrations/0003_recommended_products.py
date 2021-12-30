@@ -13,10 +13,15 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Recommended_Products',
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.BigAutoField(auto_created=True,
+                                           primary_key=True,
+                                           serialize=False,
+                                           verbose_name='ID')),
                 ('name', models.CharField(max_length=254)),
                 ('description', models.TextField(blank=True)),
-                ('image_url', models.URLField(blank=True, max_length=1024, null=True)),
+                ('image_url', models.URLField(blank=True,
+                                              max_length=1024,
+                                              null=True)),
             ],
         ),
     ]

@@ -2,11 +2,13 @@
 
 ## **Table of content** 
 - [Functionality](#functionality)
+- [User Stories](#user-stories)
 - [Browser Compatibility](#browser-compatibility)
 - [Responsiveness](#responsiveness)
-- [User Stories](#user-stories)
+- [Validators](#validators)
 
-## Functionality
+
+## **Functionality**
 |   **Test Case**  |   **Test Label**  |  **Test Action**  |  **Expected Outcome**   |  **Test Outcome** |  **Comments**       |
 |----------------|----------------|-------------------------------|-----------------------------|-----------------------------|-----------------------------|
 |TC001|**NavBar:**|Click on Brand Name from page |   Direct the user back to the home page | Pass |
@@ -60,20 +62,8 @@
 
 
 #### [Back to top](<#table-of-content>)
-
-## Browser Compatibility
-This project was tested successfully on the following browsers
-* Google Chrome
-* Microsoft Edge
-* Firefox
-* Safari
-#### [Back to top](<#table-of-content>)
-
-## Responsiveness
-This project was built using [Bootstrap 4](https://getbootstrap.com/docs/4.6/getting-started/introduction/), which is used to quickly design and customize responsive mobile-first sites. 
-#### [Back to top](<#table-of-content>)
-
-## User Stories
+***
+## **User Stories**
 ### User Stories 
 * As a user I want to know what the farm is about
     - This is achieved from the About us section.
@@ -124,4 +114,38 @@ This project was built using [Bootstrap 4](https://getbootstrap.com/docs/4.6/get
     - Administrators can also adjust, edit or delete any products.
 
     ![Search by price from Navbar](static/documents/screenshots/product-management.png)
+
 #### [Back to top](<#table-of-content>)
+***
+## **Browser Compatibility**
+This project was tested successfully on the following browsers
+* Google Chrome
+* Microsoft Edge
+* Firefox
+* Safari
+#### [Back to top](<#table-of-content>)
+***
+## **Responsiveness**
+This project was built using [Bootstrap 4](https://getbootstrap.com/docs/4.6/getting-started/introduction/), which is used to quickly design and customize responsive mobile-first sites. 
+#### [Back to top](<#table-of-content>)
+***
+### **Validators**
+**HTML Code** was passed through the **[W3C HTML Validator](https://validator.w3.org/ "W3C HTML Validator")**.
+![Validated HTML Code](static/documents/screenshots/html-validator.png)
+* Because of the use of jinja and flask templating, h2-h6 heading tags were not used on base.html template. The elimination of HTML heading tags doesnot affect the functionality or responsiveness of the site.
+* Similary the inclusion of the type attribute for JavaScript doesnot affect the functionality of the code.
+
+
+**CSS Code** was passed through the **[W3C CSS Validator](https://jigsaw.w3.org/css-validator/ "W3C CSS Validator")**.
+![validated CSS Code](static/documents/screenshots/css-validator.png)
+* No errors found
+
+**Python Code** was checked using the terminal cli command " python3 -m flake8 "
+![Validated Python Code](static/documents/screenshots/python-validator.png)
+* No issues were found that affect the functionality of the code.
+* Other issues:
+    - style convention, line too long issues. Where possible, these have been fixed. The majority of the issues are from automatically generated files and these do not affect the intended functionality of the code.
+    
+#### [Back to top](<#table-of-content>)
+***
+
