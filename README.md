@@ -176,7 +176,7 @@ Below are some features to be implemented at a later stage
 #### [Back to top](<#table-of-content>)
 ***
 ## Testing
-
+Click here for [Testing Document](testing.md)
 
 #### [Back to top](<#table-of-content>)
 ***
