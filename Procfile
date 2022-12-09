@@ -1,1 +1,0 @@
-web: gunicorn peduns_farm.wsgi:application
