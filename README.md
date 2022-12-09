@@ -1,6 +1,6 @@
 # **PEDUNS FARM**
 
-Click [here](https://peduns-farm.herokuapp.com/) for the deployed site.
+Click [here](https://peduns-farm-django.onrender.com/) for the deployed site.
 
 ## **About**  
 Peduns Farm offers freshly harvested farm produce to the comminuty for sale. 
